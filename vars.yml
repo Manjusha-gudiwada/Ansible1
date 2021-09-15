@@ -31,3 +31,9 @@
    - name: print fact variable
      debug:
       msg: OS = {{ansible_distribution}}
+   - name: run a shell command and store output
+     shell: uptime
+     register: out ## out is a variable that stores uptime
+   - name: print uptime output
+     debug:
+      msg: "{{out}}" ## in ansible if value starts with a variable it has to be double quoted
