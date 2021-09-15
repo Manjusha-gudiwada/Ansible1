@@ -37,3 +37,10 @@
    - name: print uptime output
      debug:
       msg: "{{out.stdout}}" ## in ansible if value starts with a variable it has to be double quoted
+   - name: Declare a fact/variable
+     set_fact:
+      OUTPUT: "{{out.stdout}}"
+
+   - name: print OUTPUT
+     debug:
+      msg: "{{OUTPUT}}"
