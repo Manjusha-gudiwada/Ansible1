@@ -28,3 +28,6 @@
       URL: task.google.com
      debug:
       msg: URL = {{URL}}
+   - name: print fact variable
+     debug:
+      msg: OS = {{ansible_distribution}}
