@@ -36,4 +36,4 @@
      register: out ## out is a variable that stores uptime
    - name: print uptime output
      debug:
-      msg: "{{out.std}}" ## in ansible if value starts with a variable it has to be double quoted
+      msg: "{{out.stdout}}" ## in ansible if value starts with a variable it has to be double quoted
