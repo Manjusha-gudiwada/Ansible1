@@ -3,7 +3,7 @@
      vars:
       URL1: play.google.com
       URL: play.google.com
-  vars_files: #for loading a file
+     vars_files: #for loading a file
    - varsfromfile.yml
   tasks: 
    - name: print a variable
