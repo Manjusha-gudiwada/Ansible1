@@ -1,11 +1,11 @@
-   - name: demo on variables
-     hosts: all
-    vars:
-      URL1: play.google.com
-      URL: play.google.com
-    vars_files: #for loading a file
+- name: demo on variables
+  hosts: all
+  vars:
+   URL1: play.google.com
+   URL: play.google.com
+  vars_files: #for loading a file
    - varsfromfile.yml
-    tasks: 
+  tasks: 
    - name: print a variable
      debug: 
       msg: URL = {{URL1}}
@@ -44,6 +44,6 @@
    - name: print OUTPUT
      debug:
       msg: "{{OUTPUT}}"
-     
-     roles:
-      -sample
+      
+roles:
+  - sample
