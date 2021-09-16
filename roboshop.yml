@@ -1,0 +1,54 @@
+- name: roboshop project setup - Frontend
+  hosts: FRONTEND
+  role:
+    - frontend
+
+- name: roboshop project setup - mongodb
+  hosts: MONGODB
+  role:
+    - mongodb
+
+- name: roboshop project setup - catalogue
+  hosts: CATALOGUE
+  role:
+    - catalogue
+
+- name: roboshop project setup - Redis
+  hosts: REDIS
+  role:
+    - redis
+
+- name: roboshop project setup - User
+  hosts: USER
+  role:
+    - user
+
+- name: roboshop project setup - cart
+  hosts: CART
+  role:
+    - cart
+
+- name: roboshop project setup - Mysql
+  hosts: MYSQL
+  role:
+    - mysql
+
+- name: roboshop project setup - shipping
+  hosts: SHIPPING
+  role:
+    - shipping
+
+- name: roboshop project setup - RabbitMq
+  hosts: RABBITMQ
+  role:
+    - rabbitmq
+
+- name: roboshop project setup - Payment
+  hosts: PAYMENT
+  role:
+    - payment
+
+- name: roboshop project setup - Frontend
+  hosts: FRONTEND
+  role:
+    - frontend
