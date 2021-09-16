@@ -1,8 +1,8 @@
-- name: demo on variables
-  hosts: all
-  vars:
-   URL1: play.google.com
-   URL: play.google.com
+   - name: demo on variables
+     hosts: all
+     vars:
+      URL1: play.google.com
+      URL: play.google.com
   vars_files: #for loading a file
    - varsfromfile.yml
   tasks: 
