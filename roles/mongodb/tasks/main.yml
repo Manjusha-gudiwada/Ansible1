@@ -21,7 +21,7 @@
     enabled: yes
 
 - name: download schema
- ansible.builtin.unarchive:
+  ansible.builtin.unarchive:
     src: "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
     dest: /tmp
     remote_src: yes
