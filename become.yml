@@ -1,0 +1,11 @@
+- name: Demo on become sudo
+  hosts: all
+  become: yes
+  tasks: 
+   - name: Get id of user
+     shell: id
+     register: out
+
+   - name: print
+     debug:
+      msg: "{{out}}" 
