@@ -20,7 +20,7 @@
     state: started
     enabled: yes
 
--name: download schema
+- name: download schema
  ansible.builtin.unarchive:
     src: "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
     dest: /tmp
