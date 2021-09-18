@@ -2,3 +2,10 @@
   yum:
    name: nginx
    state: present
+
+
+- name: Download frontend archive 
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+    dest: /tmp
+    remote_src: yes #unarchive module will cpy the file from role to remote place so if we dont want to do that we have to give yes 
