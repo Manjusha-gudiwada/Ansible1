@@ -17,6 +17,6 @@
 
 - name: Copy extracted content to nginx path
   ansible.builtin.copy:
-    src: /tmp/frontend-main/static
-    dest: /usr/share/nginx/html
+    src: /tmp/frontend-main/static/
+    dest: /usr/share/nginx/html/  # now all the static content will be moved into html directory
     remote_src: yes # source and destination are on the remote place only so give yes
