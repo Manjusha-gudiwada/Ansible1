@@ -9,3 +9,14 @@
     src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
     dest: /tmp
     remote_src: yes #unarchive module will cpy the file from role to remote place so if we dont want to do that we have to give yes 
+
+- name: Remove old content
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: Copy extracted content to nginx path
+  ansible.builtin.copy:
+    src: /tmp/fronend-main/static
+    dest: /usr/share/nginx/html
+    remote_src: yes # source and destination are on the remote place only so give yes
