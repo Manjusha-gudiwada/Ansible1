@@ -39,7 +39,7 @@
     src: systemd.service
     dest: /etc/systemd/system/user.service
 
-- name: restart catalogue service
+- name: restart user service
   systemd:
     name: user
     state: restarted
