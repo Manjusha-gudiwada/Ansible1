@@ -26,12 +26,14 @@
     src: /tmp/catalogue-main/
     dest: /home/roboshop/catalogue  # now all the static content will be moved into html directory
     remote_src: yes
-  
+    owner: roboshop
+    group: roboshop
 
+- name: Install node js dependencies
+  community.general.npm:
+    path: /home/roboshop/catalogue
+  become_user: roboshop # this task will become as user of roboshop and then will get executed
 
-#$ npm install 
-#NOTE: We need to update the IP address of MONGODB Server in systemd.service file
-#Now, lets set up the service with systemctl.
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 # systemctl daemon-reload
