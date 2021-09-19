@@ -18,7 +18,7 @@
 
 - name: Remove old content
   ansible.builtin.file:
-    path: /home/roboshop/user
+    path: /home/roboshop/cart
     state: absent
 
 - name: Copy extracted content to cart path
