@@ -36,7 +36,7 @@
 
 - name: setup systemd module
   copy:
-    src: systemd.sservice
+    src: systemd.service
     dest: /etc/systemd/system/catalogue.service
 
 - name: restart catalogue service
