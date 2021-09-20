@@ -4,7 +4,7 @@
    state: present
 
 - name: download
-   include_tasks: download.yaml
+   include_tasks: download.yml
 
 - name: make maven package
   shell: mvn clean package ; mv target/shipping-1.0.jar shipping.jar
@@ -12,7 +12,7 @@
    chdir: /home/roboshop/{{COMPONENT}}
 
 - name: systemd service
-   include_tasks: systemd.yaml
+   include_tasks: systemd.yml
 
 
 
