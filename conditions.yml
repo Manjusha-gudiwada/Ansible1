@@ -1,9 +1,13 @@
 - name: Demo on conditions
   hosts: localhost # no need to have ini file we are running in same machine
+  vars:
+   OS: centos
   tasks: 
    - name: centOS
      debug:
       msg: CentOs 
+    when: OS == "centos"
    - name: Ubuntu
      debug:
       msg: Ubuntu 
+    when: OS == "ubuntu"
