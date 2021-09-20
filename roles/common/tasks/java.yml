@@ -1,0 +1,26 @@
+- name: install meven package
+  yum:
+   name: maven
+   state: present
+
+- name: download
+   include_tasks: download.yaml
+
+- name: make maven package
+  shell: mvn clean package ; mv target/shipping-1.0.jar shipping.jar
+  args: 
+   chdir: /home/roboshop/{{COMPONENT}}
+
+- name: systemd service
+   include_tasks: systemd.yaml
+
+
+
+
+
+#Copy the service file and start the service.
+
+# mv /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service
+# systemctl daemon-reload
+# systemctl start shipping 
+# systemctl enable shipping
