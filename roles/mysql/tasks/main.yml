@@ -23,6 +23,7 @@
 - name: check the password reset status
   shell: echo 'show databases' | mysql -uroot -pRoboShop@1
   register: out
+  ignore_errors: yes # if we give this it will ignore the task completly even it is a failure it will ignore
 
 - name: grab default password
   shell: grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}'
