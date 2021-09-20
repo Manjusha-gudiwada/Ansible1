@@ -7,7 +7,7 @@
    state: present
 
 - name: download
-   include_tasks: download.yml
+  include_tasks: download.yml
 
 - name: Install python dependencies
   pip:
@@ -19,4 +19,4 @@
    msg: "{{ROBOSHOP_USER}}"
 
 - name: systemd service
-   include_tasks: systemd.yml
+  include_tasks: systemd.yml
