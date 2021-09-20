@@ -1,18 +1,18 @@
-- name: install meven package
+- name: Install Maven Package
   yum:
-   name: maven
-   state: present
+    name: maven
+    state: present
 
-- name: download
-   include_tasks: download.yml
+- name:  Download
+  include_tasks: download.yml
 
-- name: make maven package
+- name: Make Maven package
   shell: mvn clean package ; mv target/shipping-1.0.jar shipping.jar
-  args: 
-   chdir: /home/roboshop/{{COMPONENT}}
+  args:
+    chdir: /home/roboshop/{{COMPONENT}}
 
-- name: systemd service
-   include_tasks: systemd.yml
+- name:  SystemD
+  include_tasks: systemd.yml
 
 
 
