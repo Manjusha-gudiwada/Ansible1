@@ -22,4 +22,5 @@
      when: NUM <= 5 
 
 # in conditions it will bother about each and every task and then validate the task according to the constition and execute that particular task and remaining will be skipped
-
+# difference between number and string is strings are quoted and numbers are not
+# here variable would be a starting value defenently
