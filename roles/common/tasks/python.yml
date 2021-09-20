@@ -12,6 +12,11 @@
 - name: Install python dependencies
   pip:
     requirements: /home/roboshop/{{COMPONENT}}/requirements.txt
+    executable: pip3
+
+- name: print user details
+  debug: 
+   msg: "{{ROBOSHOP_USER}}"
 
 - name: systemd service
    include_tasks: systemd.yml
