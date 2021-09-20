@@ -2,6 +2,7 @@
   hosts: localhost # no need to have ini file we are running in same machine
   vars:
    OS: centos
+   NUM: 7
   tasks: 
    - name: centOS
      debug:
@@ -10,4 +11,15 @@
    - name: Ubuntu
      debug:
       msg: Ubuntu 
-     when: OS == "ubuntu"
+     when: OS == "ubuntu" 
+   - name: number condition 1
+     debug:
+      msg: Num con 1
+     when: NUM >= 5 
+   - name: number condition 2
+     debug:
+      msg: Num con 2
+     when: NUM >= 5 
+
+# in conditions it will bother about each and every task and then validate the task according to the constition and execute that particular task and remaining will be skipped
+
