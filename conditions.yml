@@ -1,0 +1,9 @@
+- name: Demo on conditions
+  hosts: localhost # no need to have ini file we are running in same machine
+  tasks: 
+   - name: centOS
+     debug:
+      msg: CentOs 
+   - name: Ubuntu
+     debug:
+      msg: Ubuntu 
