@@ -18,5 +18,18 @@
   debug: 
    msg: "{{ROBOSHOP_USER}}"
 
-- name: systemd service
-  include_tasks: systemd.yml
+- name: replacing user id
+  lineinfile: 
+    path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^uid'
+    line: uid = {{ROBOSHOP_USER.uid}}
+
+- name: replacing group id
+  lineinfile: 
+    path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^gid'
+    line: gid = {{ROBOSHOP_USER.gid}}
+    
+
+#- name: systemd service
+ # include_tasks: systemd.yml
