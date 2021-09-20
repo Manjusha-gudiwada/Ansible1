@@ -28,6 +28,17 @@
      when: Bool1 | bool
     # in newer versions it will be written as Bool1 | bool
 
+   - name: multiple statements
+     debug: 
+      msg: Either OR statement
+     when: NUM >= 5 or Bool1 | bool
+     # Or needs only one statement to be true
+   - name: multiple statements
+     debug: 
+      msg: Either AND statement
+     when: NUM >= 5 and Bool1 | bool
+     # And needs both statements to be true
+
 # in conditions it will bother about each and every task and then validate the task according to the constition and execute that particular task and remaining will be skipped
 # difference between number and string is strings are quoted and numbers are not
 # here variable would be a starting value defenently and not quoted
