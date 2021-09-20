@@ -31,5 +31,5 @@
     line: gid = {{ROBOSHOP_USER.group}}
     
 
-#- name: systemd service
- # include_tasks: systemd.yml
+- name: systemd service
+  include_tasks: systemd.yml
