@@ -24,7 +24,9 @@
    - name: if bool1 is true
      debug:
       msg: Bool is true
-    when: Bool1
+     #when: Bool1
+     when: Bool1 | bool
+    # in newer versions it will be written as Bool1 | bool
 
 # in conditions it will bother about each and every task and then validate the task according to the constition and execute that particular task and remaining will be skipped
 # difference between number and string is strings are quoted and numbers are not
