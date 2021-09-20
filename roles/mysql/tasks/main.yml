@@ -47,7 +47,7 @@
 
 - name: check password validate plugin
   shell: echo "uninstall plugin validate_password;" >/tmp/pass.sql ; mysql -u root -p"RoboShop@1" </tmp/pass.sql
-  when: var_out.stdrc == 0
+  when: var_out.rc == 0
 
 
 
