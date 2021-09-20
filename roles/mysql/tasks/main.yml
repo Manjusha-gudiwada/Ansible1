@@ -57,7 +57,7 @@
     dest: /tmp
     remote_src: yes
 
-- name: load schema - catalogue
+- name: load schema - mysql
   mysql_db:
     state: import
     name: all
