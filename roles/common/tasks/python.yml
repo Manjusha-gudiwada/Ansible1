@@ -28,7 +28,7 @@
   lineinfile: 
     path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^gid'
-    line: gid = {{ROBOSHOP_USER.gid}}
+    line: gid = {{ROBOSHOP_USER.group}}
     
 
 #- name: systemd service
