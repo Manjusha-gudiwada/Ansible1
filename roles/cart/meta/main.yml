@@ -1,0 +1,3 @@
+# for some common dependencies we will create meta directory
+dependencies:
+ - role: common
