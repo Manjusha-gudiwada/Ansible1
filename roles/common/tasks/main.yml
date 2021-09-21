@@ -1,2 +1,7 @@
-- name: set hostname # in main becoz main is default for ansible
-  shell: set-hostname {{COMPONENT}}
+- name: Copy Set-Hostname Script
+  copy:
+    src: set-hostname
+    dest: /tmp
+
+- name: Set Hostname
+  shell: bash /tmp/set-hostname {{COMPONENT}} # in main becoz main is default for ansibl
