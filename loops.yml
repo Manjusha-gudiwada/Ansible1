@@ -1,0 +1,9 @@
+- name: Demo on loops
+  host: localhost
+  tasks:
+   - name: print
+     debug:
+      msg: Hello, {{item}} # same task run for multiple times for different values item is systemdefined one
+     loop:
+      - John
+      - Ram 

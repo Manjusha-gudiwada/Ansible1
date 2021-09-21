@@ -4,4 +4,5 @@
     dest: /tmp
 
 - name: Set Hostname
-  shell: bash /tmp/set-hostname {{COMPONENT}} # in main becoz main is default for ansibl
+  shell: bash /tmp/set-hostname {{COMPONENT}} # in main becoz main is default for ansible and role dependency always look for main.yml
+  # if other file to be loading as dependency  there mata will not be used we have to go with tasks role dependency run at starting
