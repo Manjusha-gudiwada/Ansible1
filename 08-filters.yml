@@ -1,5 +1,5 @@
 - name: Demo on filters
-  hosts: local host
+  hosts: localhost
   vars:
    URL: https://get.jenkins.io/war-stable/2.303.1/jenkins.war
   tasks:
