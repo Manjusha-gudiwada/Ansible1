@@ -5,3 +5,8 @@
 - name: Print URL
   debug:
    msg: URL = {{URL7}}
+
+- name: Copy host file
+  template:
+    src: host.txt
+    dest: /tmp/host.txt
