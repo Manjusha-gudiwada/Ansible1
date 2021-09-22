@@ -1,5 +1,5 @@
 - name: Demo on loops
-  host: localhost
+  hosts: localhost
   tasks:
    - name: print
      debug:
