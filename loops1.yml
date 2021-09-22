@@ -10,6 +10,7 @@
    - name: print map
      debug:
       msg: Hello {{item.name}}, weilcome to {{item.course}} course
+     # when item.name == john
      loop:
       - { name: john, course: AWS }
       - { name: Ram, course: DevOps }
