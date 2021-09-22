@@ -1,0 +1,4 @@
+- name: restarting nginx
+  systemd:
+   name: nginx
+   state: resterted
