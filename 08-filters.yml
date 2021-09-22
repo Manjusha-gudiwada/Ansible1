@@ -1,0 +1,8 @@
+- name: Demo on filters
+  hosts: local host
+  vars:
+   URL: https://get.jenkins.io/war-stable/2.303.1/jenkins.war
+  tasks:
+   - name: print file (last value) of url
+     debug: 
+      mag: FILE = {{URL | split("/") }}
