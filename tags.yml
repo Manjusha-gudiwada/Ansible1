@@ -1,0 +1,14 @@
+- name: demo on tasks tag
+  hosts: all
+  tasks:
+    - name: centos
+      debug:
+       msg: CentOs  
+      tags:
+        - centos
+
+    - name: Ubuntu
+      debug:
+        msg: UBUNTU
+      tags:
+        - ubuntu

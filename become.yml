@@ -9,3 +9,7 @@
    - name: print
      debug:
       msg: "{{out}}" 
+
+      # ome can be used on task level also or on play level
+      # play level become will run all tasks as root user
+      #task level become only that task as root user
