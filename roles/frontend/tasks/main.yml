@@ -25,7 +25,8 @@
   copy:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
-
+  notify: restart nginx
+  
 - name: start nginx
   systemd: 
     name: nginx
