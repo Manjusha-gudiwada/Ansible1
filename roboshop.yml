@@ -71,6 +71,6 @@
 - name: pull play
   hosts: localhost
   become: yes
-  when: ROLE is defined
   roles: 
-   - "{{ROLE}}"
+   - role: "{{ROLE}}"
+     when: ROLE is defined
