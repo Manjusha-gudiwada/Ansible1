@@ -3,7 +3,7 @@
     name: maven
     state: present
 
-- name: Download
+- name:  Download
   include_tasks: download.yml
 
 - name: Make Maven package
