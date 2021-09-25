@@ -3,7 +3,7 @@
     name: maven
     state: present
 
-- name:  Download
+- name: Download
   include_tasks: download.yml
 
 - name: Make Maven package
@@ -14,7 +14,7 @@
 - name:  SystemD
   include_tasks: systemd.yml
 
-- name: node Exporter
+- name: Node Exporter
   include_tasks: node-exporter.yml
 
 
