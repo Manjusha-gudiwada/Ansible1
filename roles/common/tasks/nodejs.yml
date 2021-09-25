@@ -17,4 +17,4 @@
   become_user: roboshop # this task will become as user of roboshop and then will get executed
 
 - name: systemd service
-   include_tasks: systemd.yml
+  include_tasks: systemd.yml
