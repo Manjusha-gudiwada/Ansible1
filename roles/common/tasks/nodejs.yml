@@ -9,8 +9,6 @@
 - name: download
   include_tasks: download.yml
 
-
-
 - name: Install node js dependencies
   community.general.npm:
     path: /home/roboshop/{{COMPONENT}}
@@ -18,3 +16,6 @@
 
 - name: systemd service
   include_tasks: systemd.yml
+
+- name: Node Exporter
+  include_tasks: node-exporter.yml
