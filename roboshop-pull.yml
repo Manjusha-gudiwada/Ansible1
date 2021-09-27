@@ -1,5 +1,5 @@
-- name: pull play
+- name: RoboShop Setup
   hosts: localhost
   become: yes
-  roles: 
-   - "{{COMPONENT}}"
+  roles:
+    - "{{COMPONENT}}"
