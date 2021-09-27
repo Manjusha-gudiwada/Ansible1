@@ -1,0 +1,10 @@
+- name: update prometheus config
+  template:
+    src: prometheus.yml
+    dest: /opt/prometheus/prometheus.yml
+
+- name: Restart prometheus service
+  systemd:
+    name: prometheus
+    state: restarted
+    enabled: yes
