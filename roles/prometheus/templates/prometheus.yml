@@ -37,7 +37,7 @@ scrape_configs:
           - name: "tag:Name"
             values: ["frontend", "cart", "catalogue", "user", "shipping", "payment"]
 
-     relabel_configs:
+    relabel_configs:
       - source_labels:
           - '__meta_ec2_tag_Name'
         target_label:  'tagName'
