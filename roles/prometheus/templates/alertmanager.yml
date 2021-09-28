@@ -11,7 +11,7 @@ receivers:
     slack_configs:
       - channel: '#random'
         send_resolved: true
-        text: {%raw%}"<!channel> \nsummary: {{ .CommonAnnotations.summary }}"{%endraw%}
+       # text: {%raw%}"<!channel> \nsummary: {{ .CommonAnnotations.summary }}"{%endraw%}
 
  # - name: slack-notifications
   #  email_configs:
