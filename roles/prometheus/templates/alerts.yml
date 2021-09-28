@@ -1,10 +1,10 @@
 groups:
-- name: example
+- name: Hardware resources
   rules:
-  - alert: HighRequestLatency
-    expr: job:request_latency_seconds:mean5m{job="myjob"} > 0.5
+  - alert: HighCPU
+    expr: cpu_useage_in_percentage > 90
     for: 10m
     labels:
-      severity: page
+      severity: critical
     annotations:
-      summary: High request latency
+      summary: HighCPU on  
