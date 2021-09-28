@@ -1,13 +1,13 @@
 global:
   resolve_timeout: 1m
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  slack_api_url: 'https://hooks.slack.com/services/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'
 route:
   group_wait: 30s
   group_interval: 1m
   repeat_interval: 1m
   receiver: 'slack-notifications'
 receivers:
-- name: 'slack-notifications'
+  - name: 'slack-notifications'
     slack_configs:
       - channel: '#random'
         send_resolved: true
@@ -22,6 +22,7 @@ receivers:
        # auth_password: BI6QqjeUtzNqpUzkrDSeleRwPOw00TTVHDpXPamuoxaR
         #require_tls: yes
         #send_resolved: true
+
 inhibit_rules:
   - source_match:
       severity: 'critical'
