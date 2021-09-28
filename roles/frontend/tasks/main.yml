@@ -21,11 +21,11 @@
     dest: /usr/share/nginx/html/  # now all the static content will be moved into html directory
     remote_src: yes # source and destination are on the remote place only so give yes
 
-- name: copy roboshop cofig file 
+- name: Copy RoboShop Config file
   copy:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
-  notify: restart nginx
+  notify: Restart Nginx
   
 - name: start nginx
   systemd: 
