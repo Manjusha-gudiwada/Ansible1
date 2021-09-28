@@ -18,7 +18,7 @@
     src: "{{item}}.yml"
     dest: /opt/prometheus/{{item}}.yml
   loop:
-    - alert-manager
+    - alertmanager
 
 - name: Restart alert-manager service
   systemd:
