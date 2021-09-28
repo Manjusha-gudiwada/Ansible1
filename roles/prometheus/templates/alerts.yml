@@ -2,7 +2,7 @@ groups:
 - name: Hardware resources
   rules:
   - alert: HighCPU
-    expr: cpu_useage_in_percentage > 90
+    expr: cpu_usage_in_percentagev> 90
     for: 1m
     labels:
       severity: critical
