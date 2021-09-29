@@ -17,7 +17,7 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: {%raw%} "service {{ $lables.name }} down on {{ $labels.tagName }}" {%endraw%}
+      summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
 - name: services
   rules:
@@ -27,7 +27,7 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: {%raw%} "service {{ $lables.name }} down on{{ $labels.tagName }}" {%endraw%}
+      summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
 - name: services
   rules:
@@ -37,7 +37,7 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: {%raw%} "service {{ $lables.name }} down on{{ $labels.tagName }}" {%endraw%}
+      summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
 - name: services
   rules:
@@ -47,7 +47,7 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: {%raw%} "service {{ $lables.name }} down on{{ $labels.tagName }}" {%endraw%}
+      summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
 - name: services
   rules:
@@ -57,7 +57,7 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: {%raw%} "service {{ $lables.name }} down on{{ $labels.tagName }}" {%endraw%}
+      summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
 - name: services
   rules:
@@ -67,4 +67,4 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: {%raw%} "service {{ $lables.name }} down on{{ $labels.tagName }}" {%endraw%}
+      summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
