@@ -1,6 +1,6 @@
 global:
   resolve_timeout: 1m
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  slack_api_url: 'https://hooks.slack.com/services/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'
 route:
   group_wait: 30s
   group_interval: 1m
@@ -9,7 +9,7 @@ route:
 receivers:
   - name: 'slack-notifications'
     slack_configs:
-      - channel: '@Manjusha Gudiwada'
+      - channel: '#random'
         send_resolved: true
         text: {%raw%}"<!channel> \nsummary: {{ .CommonAnnotations.summary }}"{%endraw%}
 
