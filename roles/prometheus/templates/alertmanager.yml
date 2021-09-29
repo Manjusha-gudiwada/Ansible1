@@ -1,6 +1,6 @@
 global:
   resolve_timeout: 1m
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  slack_api_url: {{URL}}
 route:
   group_wait: 30s
   group_interval: 1m
