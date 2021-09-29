@@ -9,9 +9,7 @@ groups:
     annotations:
       summary: "HighCPU on {%raw%}{{ $labels.tagName }}{%endraw%}"
 
-- name: Hardware resources
-  rules:
-  - alert: HighCPU
+  - alert: HighMemUsage
     expr: ceil(((node_memory_MemTotal_bytes-node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes)*100) > 90
     for: 1m
     labels:
