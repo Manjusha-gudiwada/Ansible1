@@ -21,7 +21,7 @@ groups:
 
 - name: services
   rules:
-  - alert: CartServiceDown
+  - alert: ServiceDown
     expr: roboshop_app_monitor == 0
     for: 1m
     labels:
