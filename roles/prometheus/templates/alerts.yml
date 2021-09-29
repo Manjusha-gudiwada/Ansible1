@@ -19,8 +19,6 @@ groups:
     annotations:
       summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
-- name: services
-  rules:
   - alert: catalogue service down
     expr: node_systemd_unit_state{name="catalogue.service",tagName="catalogue",state="active"} == 0
     for: 1m
@@ -29,8 +27,6 @@ groups:
     annotations:
       summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
-- name: services
-  rules:
   - alert: frontend service down
     expr: node_systemd_unit_state{name="nginx.service",tagName="frontend",state="active"} == 0
     for: 1m
@@ -39,8 +35,6 @@ groups:
     annotations:
       summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
-- name: services
-  rules:
   - alert: user service down
     expr: node_systemd_unit_state{name="user.service",tagName="user",state="active"} == 0
     for: 1m
@@ -49,8 +43,6 @@ groups:
     annotations:
       summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
-- name: services
-  rules:
   - alert: shipping service down
     expr: node_systemd_unit_state{name="shipping.service",tagName="shipping",state="active"} == 0
     for: 1m
@@ -59,8 +51,6 @@ groups:
     annotations:
       summary: {%raw%}"service {{ $lables.name }} down on {{ $labels.tagName }}"{%endraw%}
 
-- name: services
-  rules:
   - alert: payment service down
     expr: node_systemd_unit_state{name="payment.service",tagName="payment",state="active"} == 0
     for: 1m
