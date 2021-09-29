@@ -8,3 +8,13 @@ groups:
       severity: critical
     annotations:
       summary: "HighCPU on {%raw%}{{ $labels.tagName }}{%endraw%}"
+
+- name: services
+  rules:
+  - alert: service down
+    expr: {%raw%}node_systemd_unit_state{name="{{ $labels.tagName }}.service",tagName="{{ $labels.tagName }}",state="active"} == 0 {%endraw%}
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "HighCPU on {%raw%}{{ $labels.tagName }}{%endraw%}"
