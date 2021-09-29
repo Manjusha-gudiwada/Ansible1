@@ -9,7 +9,7 @@ route:
 receivers:
   - name: 'slack-notifications'
     slack_configs:
-      - channel: '#random'
+      - channel: '#devops'
         send_resolved: true
         text: {%raw%}"<!channel> \nsummary: {{ .CommonAnnotations.summary }}"{%endraw%}
 
