@@ -1,3 +1,13 @@
+- name: setup rsyslog
+  template:
+    src: rsyslog.conf
+    dest: /etc/rsyslog.d/roboshop.conf
+ 
+- name: restart syslog service
+  systemd: 
+    name: rsyslog
+    state: restarted
+
 - name: install node js
   yum:
    name: 
