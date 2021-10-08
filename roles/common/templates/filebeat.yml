@@ -7,11 +7,11 @@ filebeat.inputs:
 
 setup.template.name: "{{COMPONENT}}"
 setup.template.pattern: "{{COMPONENT}}-*"  # taken from net filebeat custom name to get name as catalogue in ELK frontend
-
+setup.ilm.enabled: false
 
 output.elasticsearch:
     hosts: ["elasticsearch.roboshop.internal:9200"]
-    index: "{{COMPONENT}}-%{+yyyy.MM.dd}"
+    index: "{{COMPONENT}}-%{+yyyy.MM.dd}"s
 
 # default configaration
 
