@@ -31,6 +31,6 @@
   include_tasks: node-exporter.yml
 
 - name: Filebeat setup
-  include_tasks: filebeat
+  include_tasks: filebeat.yml
   vars:
     OUTPUT_TO: elasticsearch
