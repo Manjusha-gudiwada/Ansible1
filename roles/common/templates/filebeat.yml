@@ -16,7 +16,7 @@ setup.ilm.enabled: false
 
 output.elasticsearch:
     hosts: ["elasticsearch.roboshop.internal:9200"]
-    index: "{{COMPONENT}}-%{+yyyy.MM.dd}"
+    index: "{{COMPONENT}}-%{+yyyy.MM.dd}" # taken from net filebeat custom name to get name as catalogue in ELK frontend
 {% endif %}
 
 {% if OUTPUT_TO == "logstash" %}
