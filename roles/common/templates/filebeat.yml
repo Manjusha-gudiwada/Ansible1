@@ -11,7 +11,7 @@ setup.ilm.enabled: false
 
 output.elasticsearch:
     hosts: ["elasticsearch.roboshop.internal:9200"]
-    index: "{{COMPONENT}}-%{+yyyy.MM.dd}"s
+    index: "{{COMPONENT}}-%{+yyyy.MM.dd}"
 
 # default configaration
 
