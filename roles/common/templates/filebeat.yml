@@ -1,7 +1,6 @@
 filebeat.inputs:
   - type: log
     enabled: true
-    json.keys_under_root: true
     paths:
 {% if NGINX %}
      - /var/log/nginx/access.log
@@ -10,6 +9,7 @@ filebeat.inputs:
 {% endif %}
 
 {% if OUTPUT_TO == "elasticsearch" %}
+  json.keys_under_root: true
 setup.template.name: "{{COMPONENT}}"
 setup.template.pattern: "{{COMPONENT}}-*"  # taken from net filebeat custom name to get name as catalogue in ELK frontend
 setup.ilm.enabled: false
