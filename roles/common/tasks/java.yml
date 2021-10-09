@@ -19,7 +19,8 @@
 
 - name: Filebeat setup
   include_tasks: filebeat.yml
-  
+   vars:
+    OUTPUT_TO: logstash
 
 
 
