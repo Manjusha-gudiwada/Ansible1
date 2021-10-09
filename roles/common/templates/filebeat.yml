@@ -1,7 +1,7 @@
 filebeat.inputs:
   - type: log
     enabled: true
-    fields:
+    fields: # filelds is a keyword in logstash to add more info
       appName: {{COMPONENT}}
     paths:
 {% if NGINX is defined %}
