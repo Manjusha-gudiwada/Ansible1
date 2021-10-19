@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LID="lt-0a0bf15e726203db3"
-LVER=1
+LVER=2
 INSTANCE_NAME=$1
 
 if [ -z "${INSTANCE_NAME}" ]; then
